@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Bienvenido Jerónimo! 👶✨</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0369a1 100%);
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 15px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Animación de destellos flotantes */
+    .sparkle {
+      position: absolute;
+      color: rgba(186, 230, 253, 0.7);
+      font-size: 20px;
+      animation: float 6s infinite linear;
+      bottom: -40px;
+      z-index: 1;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-105vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Tarjeta Principal */
+    .card {
+      position: relative;
+      z-index: 10;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(186, 230, 253, 0.3);
+      border-radius: 24px;
+      max-width: 650px;
+      width: 100%;
+      padding: 40px 30px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+
+    .header-tag {
+      font-family: 'Caveat', cursive;
+      font-size: 2.2rem;
+      color: #7dd3fc;
+      margin-bottom: 5px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #ffffff;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+
+    /* Recuadro de Bendición y Versículo */
+    .blessing-box {
+      background: rgba(125, 211, 252, 0.08);
+      border-left: 4px solid #38bdf8;
+      padding: 20px 24px;
+      border-radius: 12px;
+      margin: 25px 0;
+      text-align: left;
+      font-style: italic;
+      color: #e0f2fe;
+      line-height: 1.7;
+    }
+
+    .blessing-box span {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.9rem;
+      color: #94a3b8;
+      text-align: right;
+      font-weight: 600;
+    }
+
+    .message-body {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #f1f5f9;
+      margin: 25px 0;
+      text-align: center;
+    }
+
+    .footer-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #0284c7, #38bdf8);
+      color: #ffffff;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Animación con estrellas y corazones -->
+  <script>
+    function createSparkle() {
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+      const icons = ['✨', '👶', '💙', '⭐', '🕊️'];
+      sparkle.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+      sparkle.style.left = Math.random() * 100 + 'vw';
+      sparkle.style.animationDuration = Math.random() * 3 + 4 + 's';
+      sparkle.style.fontSize = Math.random() * 12 + 16 + 'px';
+      document.body.appendChild(sparkle);
+
+      setTimeout(() => {
+        sparkle.remove();
+      }, 7000);
+    }
+    setInterval(createSparkle, 450);
+  </script>
+
+  <div class="card">
+    <div class="header-tag">Una nueva vida llega a iluminar sus vidas</div>
+    <h1>👶 ¡Bienvenido Bebé Jerónimo! ✨</h1>
+
+    <div class="blessing-box">
+      "Antes de formarte en el vientre te conocí, y antes de que nacieras te santifiqué."
+      <span>— Jeremías 1:5 🙏💙</span>
+    </div>
+
+    <div class="message-body">
+      <p style="margin-bottom: 15px;">
+        <strong>¡Amiga linda!</strong> Qué emoción tan grande siente mi corazón al saber que estás a solo un paso de tener en tus brazos al hermoso <strong>Jerónimo</strong>.
+      </p>
+      <p style="margin-bottom: 15px;">
+        Has sido una mujer fuerte y valiente durante todo este camino. No me cabe duda de que serás una madre extraordinaria, llena de amor, ternura y sabiduría.
+      </p>
+      <p>
+        Que Dios bendiga tu parto, proteja la salud de ambos y llene su hogar de paz, salud y momentos inolvidables. ¡Estoy contigo celebrando este milagro! 🤍
+      </p>
+    </div>
+
+    <div class="footer-badge">
+      ¡Que Dios bendiga la llegada de Jerónimo hoy y siempre! 🙏🍼
+    </div>
+  </div>
+
+</body>
+</html>
